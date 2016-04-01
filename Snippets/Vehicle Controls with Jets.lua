@@ -1,6 +1,6 @@
 
 function Blueprint:Build()
-	function function self.ControlUpPress()
+	function self.ControlUpPress()
 		local ps = self:GetPSByName("Particle Name Here") 
 		if ps then ps:SwitchONParticleEmitting() end
 	end
@@ -36,7 +36,7 @@ function Blueprint:Build()
 	function self.ControlRightPress()
 		local ps = self:GetPSByName("Particle Name Here") 
 		if ps then ps:SwitchONParticleEmitting() end
-		end
+	end
  
 	function self.ControlRightRelease()
 		local ps = self:GetPSByName("Particle Name Here") 
