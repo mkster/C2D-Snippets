@@ -9,7 +9,7 @@ function Blueprint:Build()
   self.radar:SetUpCone(radarPos, 0, math.twopi, length)
 
   --setup the collisons of the radar: assemblies, MOs, terrain, resources
-	self.radar:SetUpCheck(true, true, true, true)
+  self.radar:SetUpCheck(true, true, true, true)
 
 end
 

@@ -6,11 +6,11 @@ function Blueprint:Build()
   --tool button functions
   function self.ToolLeftButtonPress()
     self.right = true
-	end
+  end
 
-	function self.ToolLeftButtonRelease()
+  function self.ToolLeftButtonRelease()
     self.right = false
-	end
+  end
   
 end
 

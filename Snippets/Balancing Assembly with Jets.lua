@@ -2,9 +2,9 @@
 --Change “Jet Leg Right” for the Jet PS to the right of your Blueprint, same thing for “Jet Leg Left”
   
 function Blueprint:Update()
-	local mo = self:GetMasterMO()
-	if mo then
-		local right = self:GetPSByName("Jet Leg Right")
+  local mo = self:GetMasterMO()
+  if mo then
+    local right = self:GetPSByName("Jet Leg Right")
     local left = self:GetPSByName("Jet Leg Left")
     local ori = mo:GetOrientation()
     local grav = mo:GetGravityVectorAngleRad() + math.halfpi
@@ -20,7 +20,7 @@ function Blueprint:Update()
       if left then left:SetParticleEmitting(false) end
       if right then right:SetParticleEmitting(false) end
     end
-	end
+  end
 end  
   
   
