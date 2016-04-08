@@ -7,12 +7,12 @@ function Blueprint:Build()
   -- Pioneer's script will call these functions to control the tool
   -- add code to these
   
-  self.OnToolActivate = function()
+  function self.OnToolActivate()
     print("tool picked up")
     self.activated = true
     
     local mo = self:GetMasterMO()
-     mo:SetBalancer(true)
+    mo:SetBalancer(true)
   end
 
   function self.OnToolDeactivate()
@@ -20,7 +20,7 @@ function Blueprint:Build()
     self.activated = false
     
     local mo = self:GetMasterMO()
-     mo:SetBalancer(false)
+    mo:SetBalancer(false)
   end
 
   function self.ToolLeftButtonPress()
@@ -61,6 +61,7 @@ function Blueprint:Update()
     
     --add code here
     if self.left then
+      --left button held down
       print("left held, mouse at: ", self.aim_point)
     end
    

@@ -6,6 +6,7 @@ function Blueprint:Build()
   
   --setup the radar
   self.radar = self:GetRadars():AddRadar("Name")
+  --arguments: position, direction, ray rotation arc (math.twopi is full circle), ray length
   self.radar:SetUpCone(radarPos, 0, math.twopi, length)
 
   --setup the collisons of the radar: assemblies, MOs, terrain, resources
@@ -16,7 +17,8 @@ end
 
 function Blueprint:Update()
   
-  --draw the radar for debugging
+  --draw the radar for debugging 
+  --tick show debug wires in game mode in the bottom of the edior in BP edit mode
   self:DrawWiresAllRadars()
   
   --update the radar positon every frame
@@ -29,12 +31,13 @@ function Blueprint:Update()
     if signal then
       local to = signal:GetTO()
       local mo = signal:GetMO()
+      local pos = signal:GetPoint()
       if to then
         --to foung
-        print("TO found", to)      
+        print("TO found", pos, to)      
       elseif mo then
         --mo found (do something with the mo here)
-        print("MO found", mo)
+        print("MO found", pos, mo)
       end
     end
   end
