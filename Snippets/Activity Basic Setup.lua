@@ -1,12 +1,12 @@
 function Activity:Build()
   
-	--overwrite standard starting blueprints
-	function bpmenu.add_basic_blueprints(controller) 
-		ctrl:AddBlueprintToMenuNoEffect("Rover Minimal Jets", No)
-		ctrl:AddBlueprintToMenuNoEffect("Rover Carbon", No)
-		ctrl:AddBlueprintToMenuNoEffect("Rover Climber", No)
-	end
-	
+  --overwrite standard starting blueprints
+  function bpmenu.add_basic_blueprints(controller) 
+    ctrl:AddBlueprintToMenuNoEffect("Rover Minimal Jets", No)
+    ctrl:AddBlueprintToMenuNoEffect("Rover Carbon", No)
+    ctrl:AddBlueprintToMenuNoEffect("Rover Climber", No)
+  end
+  
   --set start resources
   for i,ctrl in ipairs(scene:GetHumanControllers()) do
     local n = 300
@@ -20,14 +20,14 @@ function Activity:Build()
   scene:SetLightingEnabled(false)
   scene:SetDiscoveryEnabled(false)
   
-	--turn off resource bars ui
-	pioneer_ui.set_visible(false)
+  --turn off resource bars ui
+  pioneer_ui.set_visible(false)
   
   --disable restart tip in spectator mode
   hud.update_restart_tip = function() return end
   
   --start player in closest vehicle
-	scene:PutPioneerInsideVehicle()
+  scene:PutPioneerInsideVehicle()
   
   --setup racing gamemode (check raceing level for details or the activities of other levels for other gamemodes)
   local vehicles = {"Rover Minimal Jets", "Rover Carbon", "Rover Climber", "Fauna Crab", "Bot Frosty"}
