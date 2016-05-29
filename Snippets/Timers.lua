@@ -2,7 +2,7 @@
 function Blueprint:Build()
   
   local timeLimit = 5
-  self.timer = self:CreateTimer(0, timeLimit, false, false)
+  self.timer = self:CreateTimer(0, timeLimit)
   
 end
 

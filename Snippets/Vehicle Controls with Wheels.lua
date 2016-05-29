@@ -25,11 +25,11 @@ end
 function Blueprint:Update()
   
   if self.right then
-    self:JointSet("Wheel Joint Name Here"):DoMotorForce(-15, false)
+    self:JointSet("Wheel Joint Name"):DoMotorForce(-15)
   end
  
   if self.left then
-    self:JointSet("Wheel Joint Name Here"):DoMotorForce(15, false)
+    self:JointSet("Wheel Joint Name"):DoMotorForce(15)
   end
   
 end

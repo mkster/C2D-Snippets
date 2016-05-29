@@ -8,7 +8,6 @@ function Blueprint:Build()
   -- add code to these
   
   function self.OnToolActivate()
-    print("tool picked up")
     self.activated = true
     
     local mo = self:GetMasterMO()
@@ -16,7 +15,6 @@ function Blueprint:Build()
   end
 
   function self.OnToolDeactivate()
-    print("tool dropped")
     self.activated = false
     
     local mo = self:GetMasterMO()
@@ -24,12 +22,10 @@ function Blueprint:Build()
   end
 
   function self.ToolLeftButtonPress()
-    print("left pressed")
     self.left = true
   end
 
   function self.ToolLeftButtonRelease()
-    print("left released")
     self.left = false
   end
 
