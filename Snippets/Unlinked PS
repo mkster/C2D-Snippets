@@ -1,0 +1,25 @@
+ -- Build
+
+function Blueprint:Build()
+	local ps = self:GetPSByName("NAME HERE")
+  self.ps = ps:GetID()
+  self:UnlinkPSAndFromMO(ps)
+  
+end
+
+
+
+
+
+
+-- Update
+
+function Blueprint:Update()
+  
+  	local ps = scene:GetPSByID(self.ps)
+		if ps then
+			ps:EmitBoom()
+      --ps:SetParticleEmitting(true)
+		end
+  
+end
